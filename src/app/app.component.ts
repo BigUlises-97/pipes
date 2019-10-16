@@ -9,6 +9,8 @@ export class AppComponent {
   
   nombre = "Fabricio";
 
+  nombre2 = "fabriCio ulIses sotO miraNda";
+
   arreglo = [1,2,3,4,5,6,7,8,9,10];
 
   PI = Math.PI;
@@ -32,5 +34,9 @@ export class AppComponent {
   });
 
   fecha = new Date();
+
+  video = "ha8i062kYy8";
+
+  activar:boolean = true;
 
 }
