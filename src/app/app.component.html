@@ -12,19 +12,101 @@
             </tr>
         </thead>
         <tbody>
+            <!-- UPPERCASE -->
             <tr>
                 <td>{{nombre}}</td>
                 <td>uppercase</td>
                 <td>{{nombre | uppercase}}</td>
             </tr>
-
+            <!-- LOWERCASE -->
             <tr>
                 <td>{{nombre}}</td>
                 <td>lowercase</td>
                 <td>{{nombre | lowercase}}</td>
             </tr>
-
+            <!-- SLICE 3-->
+            <tr>
+                <td>{{nombre}}</td>
+                <td>slice:3</td>
+                <td>{{nombre | slice:3}}</td>
+            </tr>
+            <!-- SLICE 0-3-->
+            <tr>
+                <td>{{nombre}}</td>
+                <td>slice:0:3</td>
+                <td>{{nombre | slice:0:3}}</td>
+            </tr>
+            <!-- SLICE 1-5-->
+            <tr>
+                <td>{{arreglo}}</td>
+                <td>slice:0:3</td>
+                <td>{{arreglo | slice:1:5}}</td>
+            </tr>
+            <!-- NUMBER:'3.0-0' -->
+            <tr>
+                <td>{{PI}}</td>
+                <td>number:'3.0-0'</td>
+                <td>{{ PI | number:'3.0-0' }}</td>
+            </tr>
+            <!-- NUMBER:'1.0-2' -->
+            <tr>
+                <td>{{PI}}</td>
+                <td>number:'1.0-2'</td>
+                <td>{{ PI | number:'1.0-2' }}</td>
+            </tr>
+            <!-- percent  -->
+            <tr>
+                <td>{{a}}</td>
+                <td>percent</td>
+                <td>{{ a | percent }}</td>
+            </tr>
+            <!-- percent:'2.2-2'  -->
+            <tr>
+                <td>{{a}}</td>
+                <td>percent:'2.2-2'</td>
+                <td>{{ a | percent:'2.2-2' }}</td>
+            </tr>
+            <!-- CURRENCY -->
+            <tr>
+                <td>{{salario}}</td>
+                <td>currency</td>
+                <td>{{ salario | currency }}</td>
+            </tr>
+            <!-- CURRENCY EUR -->
+            <tr>
+                <td>{{salario}}</td>
+                <td>currency:'EUR'</td>
+                <td>{{ salario | currency:'EUR' }}</td>
+            </tr>
+            <!-- ASYNC  -->
+            <tr>
+                <td>{{valorDePromesa}}</td>
+                <td>async</td>
+                <td>{{ valorDePromesa | async }}</td>
+            </tr>
+            <!-- DATE  -->
+            <tr>
+                <td>{{fecha}}</td>
+                <td>date</td>
+                <td>{{ fecha | date }}</td>
+            </tr>
+            <!-- DATE custom  -->
+            <tr>
+                <td>{{fecha}}</td>
+                <td>date:'MMMM - dd'</td>
+                <td>{{ fecha | date:'MMMM - dd' }}</td>
+            </tr>
         </tbody>
     </table>
 
+    <h4>Slice</h4>
+    <ul>
+        <li *ngFor="let item of arreglo | slice:5:20"> {{ item }} </li>
+    </ul>
+
+    <h4>JSON</h4>
+    <pre>
+        {{ heroe | json }}
+    </pre>
+    <br><br><br><br><br><br>
 </div>
